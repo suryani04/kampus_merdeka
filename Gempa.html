@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Informasi</title>
+    </head>
+    <body bgcolor="B4CFB0">
+        <script>
+            let judul = ['No.', 'Tanggal', 'Lokasi Gempa', 'Skala', 'Dampak',];
+        </script>
+         <h1 align="center">Informasi Gempa</h1>
+         <table border="1" align="center" cellpadding="8" cellspacing="0" width="60%">
+             <thead>
+                 <tr bgcolor="#789395">
+                     <script>
+                         for (const jdl of judul) {
+                             document.write(`<th>${jdl}</th>`);
+                         }
+                     </script>
+                 </tr>
+                 <tbody align="center">
+                        <script>
+                        class gempa {
+                            constructor(no, waktu, lokasi, skala) {
+                                this.no = no;
+                                this.waktu = waktu;
+                                this.lokasi = lokasi;
+                                this.skala = skala;
+                                
+                            }
+                    
+                            dampak(akibat) {
+                                if (this.skala > 0 && this.skala <= 2) {
+                                    akibat= "Tidak terasa"
+                    
+                                    document.write(`<tr>
+                                        <td>${this.no}</td>
+                                        <td>${this.waktu}</td>
+                                        <td>${this.lokasi}</td>
+                                        <td>${this.skala}</td>
+                                        <td>${akibat} </td></tr>`);
+
+                                } else if (this.skala > 2 && this.skala <= 4) {
+                                    akibat = "Bangunan retak-retak"
+                    
+                                    document.write(`<tr>
+                                        <td>${this.no}</td>
+                                        <td>${this.waktu}</td>
+                                        <td>${this.lokasi}</td>
+                                        <td>${this.skala}</td>
+                                        <td>${akibat} </td></tr>`);
+
+                                } else if (this.skala > 4 && this.skala <= 6) {
+                                    akibat = "Bangunan roboh"
+                    
+                                    document.write(`<tr>
+                                        <td>${this.no}</td>
+                                        <td>${this.waktu}</td>
+                                        <td>${this.lokasi}</td>
+                                        <td>${this.skala}</td>
+                                        <td>${akibat} </td></tr>`);
+
+                                } else if(this.skala > 6){
+                                    akibat = "Bangunan roboh dan berpotensi tsunami"
+                    
+                                    document.write(`<tr>
+                                        <td>${this.no}</td>
+                                        <td>${this.waktu}</td>
+                                        <td>${this.lokasi}</td>
+                                        <td>${this.skala}</td>
+                                        <td>${akibat} </td></tr>`);
+                                    
+                                }else{
+                                    document.write(`tidak diketahu, silahkan cek kembali nilainya`);
+            }
+                                }
+                            }
+                        
+                    
+                    
+                        let g1 = new gempa(1, "08 Maret 2022", "Ondong Sulut", 5);
+                            g1.dampak();
+                        let g2 = new gempa(2,"08 Maret 2022", "Maluku Tenggara Barat", 5);
+                            g2.dampak();
+                        let g3 = new gempa(3,"05 Maret 2022", "Aceh Jaya", 5);
+                            g3.dampak();
+                        let g4 = new gempa(4,"04 Maret 2022", "Maluku Barat Daya", 5);
+                            g4.dampak();
+                        let g5 = new gempa(5,"01 Maret 2022", "Pangandaran, Jabar", 4);
+                            g5.dampak();
+                        let g6 = new gempa(6,"02 Februari 2022", "Maluku Barat daya", 6);
+                            g6.dampak();
+                        let g7 = new gempa(7,"31 Januari 2022", "saburai Jua, NTT", 6);
+                            g7.dampak();
+                        let g8 = new gempa(8,"11 Mar 2011", "Sendai, Jepang", 9);
+                            g8.dampak();
+                        let g9 = new gempa(9,"26 Desember 2004", "Aceh, Indonesia", 9);
+                            g9.dampak();
+                        let g10 = new gempa1(10,"22 Mei 1960", "Valdivia, Chili", 9);
+                            g10.dampak();
+                    
+                    </script>
+    </body>
+</html>
