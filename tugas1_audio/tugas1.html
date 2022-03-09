@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>latihan Jquery</title>
+    <script src="js/jquery.js"></script>
+
+    <style>
+        body {
+            background-color: antiquewhite;
+        }
+
+        h2 {
+            text-align: center;
+            font-family: monospace;
+        }
+
+        .g1,
+        .g2,
+        .g3,
+        .g4 {
+            background: rgba(185, 74, 143, 0.425);
+            width: 250px;
+            height: 250px;
+            cursor: pointer;
+        }
+
+        .utama {
+            margin: 5px;
+            border: 3px solid saddlebrown;
+            float:left;
+            width: 250px;
+            height: 220;
+        }
+
+        .nama {
+            padding: 25px;
+            font-size: 20px;
+            text-align: center;
+            text-transform: uppercase;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .kotak {
+            margin: 2% 10%;
+        }
+    </style>
+
+    <script>
+        $("document").ready(function () {
+            $("div.g1").mouseover(function () {
+                $(this).css({
+                    background: "url('image/ayam.jpg')"
+                });
+            });
+            $("div.g1").mouseout(function () {
+                $(this).css({
+                    background: "black"
+                });
+            });
+            $("div.g1").click(function () {
+                $("<audio></audio>").attr({
+                    'src': "audio/ayam.mp3",
+                    'volume': 10.0,
+                    'autoplay': 'autoplay'
+                }).appendTo("div");
+            });
+            $("div.g1").mouseout(function () {
+                $("<audio></audio>").attr({
+                    'autostop': 'autostop'
+                }).appendTo("div");
+            });
+
+            $("div.g2").mouseover(function () {
+                $(this).css({
+                    background: "url('image/angsa1.jpg')"
+                });
+            });
+            $("div.g2").mouseout(function () {
+                $(this).css({
+                    background: "black"
+                });
+            });
+            $("div.g2").click(function () {
+                $("<audio></audio>").attr({
+                    'src': "audio/angsa.mp3",
+                    'volume': 10.0,
+                    'autoplay': 'autoplay'
+                }).appendTo("div");
+            });
+            $("div.g3").mouseover(function () {
+                $(this).css({
+                    background: "url('image/bebek.webp')"
+                });
+            });
+            $("div.g3").mouseout(function () {
+                $(this).css({
+                    background: "black"
+                });
+            });
+            $("div.g3").click(function () {
+                $("<audio></audio>").attr({
+                    'src': "audio/bebek.mp3",
+                    'volume': 10.0,
+                    'autoplay': 'autoplay'
+                }).appendTo("div");
+            });
+            $("div.g4").mouseover(function () {
+                $(this).css({
+                    background: "url('image/kucing.jpg')"
+                });
+            });
+            $("div.g4").mouseout(function () {
+                $(this).css({
+                    background: "black"
+                });
+            });
+            $("div.g4").click(function () {
+                $("<audio></audio>").attr({
+                    'src': "audio/kucing.mp3",
+                    'volume': 10.0,
+                    'autoplay': 'autoplay'
+                }).appendTo("div");
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+    </br>
+    <h2>"Dekatkan mouse pada setiap kotak untuk melihat gambar </br>Dan klik pada gambar untuk mendengarkan suara"</h2>
+    <div class="kotak">
+        <div class="utama">
+            <div class="g1"></div>
+            <div class="nama">Ayam</div>
+        </div>
+        <div class="utama">
+            <div class="g2"></div>
+            <div class="nama">angsa</div>
+        </div>
+        <div class="utama">
+            <div class="g3"></div>
+            <div class="nama">Bebek</div>
+        </div>
+        <div class="utama">
+            <div class="g4"></div>
+            <div class="nama">Kucing</div>
+        </div>
+    </div>
+</body>
+
+</html>
